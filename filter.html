@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
+    <style>
+      /* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --text-color: #000000;
+    --main-color: #83b735;
+}
+section {
+    padding: 50px 10%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    background: #edecea;
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.navbar {
+    position: relative;
+    display: flex;
+}
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.cart{
+    margin-left: 30px;
+    width: 20px;
+    height: 20px;
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: covere;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+.home-text h1{
+    font-size: 2.32rem;
+}
+.home-text p{
+    font-size: 0.938rem;
+    margin: 0.4rem 0 1.8rem;
+}
+.home-text span{
+    color: var(--main-color);
+}
+.btn{
+    padding: 10px 14px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 14px;
+}
+.btn:hover{
+    background: #8fc53d;
+}
+.shop-container, 
+.new-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.box{
+    position: relative;
+    box-shadow: 1px 4px 4px rgb(0, 0, 0, 0.1);
+    border-radius: 44px 4px 4px 4px;
+}
+.box .box-img{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 44px 4px 0 0;
+}
+.title-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.title-price h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.box span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 12px;
+    color: var(--main-color);
+}
+.stars .bx{
+    color: var(--main-color);
+}
+.new-container .box{
+    border-radius: 4px;
+}
+.new-container .box .box-img{
+    border-radius: 4px;
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.about-img img{
+    width: 80%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.about-text span{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.newsletter h2{
+    color: #fff;
+}
+.news-box{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.news-box input{
+    width: 260px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: #fff;
+    padding: 10px;
+}
+.news-box .btn{
+    height: 44px;
+    padding: 11px;
+    border-radius: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1rem;
+}
+.footer-box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-box span{
+    color: var(--main-color);
+}
+.button{
+    padding: 8px 12px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 12px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">MAKAAN <span>.com</span></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="filter.html">Shop</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="login.html">Sign in</a></li>
+          <li><a href="contact (1).html">Contact Us</a></li>
+          <li><a href="shopcart.html" class="icon-cart"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg></a></li>
+      </ul>
+  </header>
+  <br><br><br><br>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">MAKAAN <span>.com</span></div>
+        <input type="text" id="txtSearch" placeholder="Search Product..." />
+        <h3>Category</h3>
+        <ul class="category-list">
+
+        </ul>
+        <h3>Price Range</h3>
+        <div class="price">
+          <input type="range" id="priceRange" />
+          <span class="priceValue">500</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="products"></div>
+      </div>
+    </div>
+    <script>
+
+        const data = [
+          {
+            id: 1,
+            name: "SKRUVSTA Comfy grey sofa set",
+            img:"https://m.media-amazon.com/images/I/81WHSFy4ZqL._SX679_.jpg",
+            amt: 24999,
+            seller: "SHREE NEMI ART EXPORT",
+            catagory: "Sofa",
+          },
+        
+          {
+            id: 2,
+            name: "Solid Sheesham Wood Three Seater Sofa",
+            img: "https://m.media-amazon.com/images/I/71m46di24tL._SX679_.jpg",
+            amt: 25000,
+            seller: "DRYLC Furniture",
+            catagory: "Sofa",
+          },
+        
+          {
+            id: 3,
+            name: "3 Seater Sofa (Fabric, Sapling Green)",
+            img: "https://m.media-amazon.com/images/I/41BgJBmTlbL._SX300_SY300_QL70_FMwebp_.jpg",
+            amt: 17998,
+            seller: "Sleepyhead",
+            catagory: "Sofa",
+          },
+          {
+            id: 4,
+            name: "Wood Hand Carved Rocking Chair",
+            img: "https://m.media-amazon.com/images/I/61lM-1bVClL.jpg",
+            amt: 14999,
+            seller: "VELVET ENTERPRISES",
+            catagory: "Chairs",
+          },
+          {
+            id: 5,
+            name: "Wing Chair with Footrest",
+            img: "https://m.media-amazon.com/images/I/51tptu4B1jL.jpg",
+            amt: 15999,
+            seller: "VELVET ENTERPRISES",
+            catagory: "Chairs",
+          },
+        
+          {
+            id: 6,
+            name: "Sky-blue Wing Chair for Living Room",
+            img: "https://m.media-amazon.com/images/I/51Q-qnmNO3L._SX679_.jpg",
+            amt: 15001,
+            seller: "SiedA",
+            catagory: "Chairs",
+          },
+        
+          {
+            id: 7,
+            name: "Wooden Wing ARM Chair",
+            img: "https://m.media-amazon.com/images/I/61FSh9dLXPL._SY300_SX300_QL70_FMwebp_.jpg",
+            amt: 13599,
+            seller: "FORESTER FURNITURE",
+            catagory: "Chairs",
+          },
+          {
+            id: 8,
+            name: "Metal Round Set of 2 Coffee Table",
+            img: "https://m.media-amazon.com/images/I/619JNqr3UWL._SX679_.jpg",
+            amt: 3329,
+            seller: "AAFIYA HANDICRAFTS",
+            catagory: "Coffee Tables",
+          },
+          {
+            id: 9,
+            name: "Round Coffee Table Modern Sofa Side Table",
+            img: "https://m.media-amazon.com/images/I/813dNK7+jmL._SX679_.jpg",
+            amt: 2649,
+            seller: "EDEUEQUE",
+            catagory: "Coffee Tables",
+          },
+        
+          {
+            id: 10,
+            name: "Triangle End Coffee Table",
+            img: "https://m.media-amazon.com/images/I/61Cp0uptQwL._SX679_.jpg",
+            amt: 1599,
+            seller: "Tree House",
+            catagory: "Coffee Tables",
+          },
+        ];
+        
+        const productsContainer = document.querySelector(".products");
+        const categoryList = document.querySelector(".category-list");
+        
+        function displayProducts(products) {
+          if (products.length > 0) {
+            const product_details = products
+              .map(
+                (product) => `
+          <div class="product">
+          <div class="img">
+            <img src="${product.img}" alt="${product.name}" />
+          </div>
+          <div class="product-details">
+            <span class="name">${product.name}</span>
+            <span class="amt">Rs.${product.amt}</span>
+            <span class="seller">${product.seller}</span>
+          </div>
+        </div>`
+              )
+              .join("");
+        
+            productsContainer.innerHTML = product_details;
+          } else {
+            productsContainer.innerHTML = "<h3>No Products Available</h3>";
+          }
+        }
+        
+        function setCategories() {
+          const allCategories = data.map((product) => product.catagory);
+          //console.log(allCategories);
+          const catagories = [
+            "All",
+            ...allCategories.filter((product, index) => {
+              return allCategories.indexOf(product) === index;
+            }),
+          ];
+          //console.log(catagories);
+          categoryList.innerHTML = catagories.map((catagory) => `<li>${catagory}</li>`).join("");
+        
+          categoryList.addEventListener("click", (e) => {
+            const selectedCatagory = e.target.textContent;
+            selectedCatagory === "All" ? displayProducts(data) : displayProducts(data.filter((product) => product.catagory == selectedCatagory));
+          });
+        }
+        const priceRange = document.querySelector("#priceRange");
+        const priceValue = document.querySelector(".priceValue");
+        
+        function setPrices() {
+          const priceList = data.map((product) => product.amt);
+          const minPrice = Math.min(...priceList);
+          const maxPrice = Math.max(...priceList);
+          priceRange.min = minPrice;
+          priceRange.max = maxPrice;
+          priceValue.textContent = "Rs." + maxPrice;
+        
+          priceRange.addEventListener("input", (e) => {
+            priceValue.textContent = "Rs." + e.target.value;
+            displayProducts(data.filter((product) => product.amt <= e.target.value));
+          });
+        }
+        
+        const txtSearch = document.querySelector("#txtSearch");
+        txtSearch.addEventListener("keyup", (e) => {
+          const value = e.target.value.toLowerCase().trim();
+          if (value) {
+            displayProducts(data.filter((product) => product.name.toLowerCase().indexOf(value) !== -1));
+          } else {
+            displayProducts(data);
+          }
+        });
+        
+        displayProducts(data);
+        setCategories();
+        setPrices();
+        </script>
+  </body>
+</html>

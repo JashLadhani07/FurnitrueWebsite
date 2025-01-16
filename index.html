@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="shopping.js"></script>
+</head>
+<body>    
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo">MAKAAN <span>.com</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="filter.html">Shop</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="contact (1).html">Contact Us</a></li>
+            <li><a href="shopcart.html" class="icon-cart"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+              </svg></a></li>
+        </ul>
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1><Span>Premium </Span>Collection of <br><span>Affordable & Classy </span><br> Furniture</h1>
+            <p>Your comfort is our priority.</p>
+            <a href="filter.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <!-- Shop -->
+    <section class="shop" id="shop">
+        <div class="heading">
+            <span>Best Selling</span>
+            <h2>Shop Now</h2>
+        </div>
+        <!-- Content -->
+        <div class="shop-container">
+            <!-- Box 1 -->
+            <div class="box" id="box1">
+                <div class="box-img">
+                    <img src="p1.jpg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>Gray Chair</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.4600</span>
+                <button class="button" onclick="addToCart(1)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+            <!-- Box 2 -->
+            <div class="box" id="box2">
+                <div class="box-img">
+                    <img src="p2.jpg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>Blue Chair</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.4900</span>
+                <button class="button" onclick="addToCart(2)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+            <!-- Box 3 -->
+            <div class="box" id="box3">
+                <div class="box-img">
+                    <img src="about.jpg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>Red Living Room Sofa</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.14000</span>
+                <button class="button" onclick="addToCart(3)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+            <!-- Box 4 -->
+            <div class="box" id="box4">
+                <div class="box-img">
+                    <img src="p4.jpg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>Beige Chair</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.3700</span>
+                <button class="button" onclick="addToCart(4)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+            <!-- Box 5 -->
+            <div class="box" id="box5">
+                <div class="box-img">
+                    <img src="images/table3.jpg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>White Bedside Drawer</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.3300</span>
+                <button class="button" onclick="addToCart(5)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+            <!-- Box 6 -->
+            <div class="box" id="box6">
+                <div class="box-img">
+                    <img src="images/lamp2.jpeg" alt="" style="width: 100%; height: 400px;">
+                </div>
+                <div class="title-price">
+                    <h3>Candle Lamp</h3>
+                    <div class="ratings-wrapper">
+                        <div data-productid="39" class="ratings">
+                           <span data-rating="5">★</span>
+                           <span data-rating="4">★</span>
+                           <span data-rating="3">★</span>
+                           <span data-rating="2">★</span>
+                           <span data-rating="1">★</span>
+                        </div>
+                     </div>
+                    <script src="star.js"></script>
+                </div>
+                <span>Rs.3400</span>
+                <button class="button" onclick="addToCart(6)">Add to cart</button>
+                <i class='bx bx-cart' ></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+        <img src="images/sofa1.png" alt="">
+        </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <h2>Furniture is an important part <br>for comfort</h2>
+                <h5>Welcome to MAKAAN<span>.com</span>, where we believe that every space deserves to be adorned with beautiful, functional furniture that reflects your unique style and personality.
+
+                    At MAKAAN<span>.com</span>, we're passionate about creating spaces that inspire, uplift, and bring joy to our customers' lives. Whether you're furnishing your dream home, designing a cozy corner in your office, or revamping a commercial space, we're here to help you every step of the way.
+                    
+                    What sets us apart is our commitment to quality craftsmanship, exceptional design, and unparalleled customer service. We work closely with skilled artisans and trusted manufacturers to curate a collection of furniture that combines timeless elegance with modern functionality.</h5>
+                <br>
+                <h5>Whether you're browsing our website from the comfort of your home or visiting our showroom to see our pieces up close, we invite you to explore our world of furniture and discover the perfect pieces to transform your space into a haven of style and sophistication.
+
+                    Thank you for choosing MAKAAN<span>.com</span> – where comfort meets creativity, and every piece tells a story.</h5>
+            </div>
+        </section>
+        <section class="newsletter" id="contact">
+            <h2>Subscribe To Newsletter</h2>
+            <div class="news-box">
+                <input type="text" placeholder="Enter your email...">
+                <a href="#" class="btn">Subscribe</a>
+            </div>
+        </section>
+    <!-- Footer -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <h2>Brand <span>X.</span></h2>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Services</h3>
+            <li>Product</a></li>
+            <li>Help & Support</a></li>
+            <li>Pricing</a></li>
+            <li>FAQ</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Our Product</h3>
+            <li>Sofa's</a></li>
+            <li>Chair's</a></li>
+            <li>Living Room</a></li>
+            <li>Office</a></li>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <span>Mumbai, 400092</span>
+            <span>+91 99273XXXXX</span>
+            <span>makaanfurn@gmail.com</span>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>&#169; CarpoolVenom All Right Reserved.</p>
+    </div>
+    <script>
+        function addToCart(productId) {
+    // Get product details
+    let productName = document.getElementById('box' + productId).querySelector('h3').innerText;
+    let productPrice = document.getElementById('box' + productId).querySelector('span').innerText;
+
+    // Create an object for the cart item
+    let cartItem = {
+        name: productName,
+        price: productPrice
+    };
+
+    // Store the cart item in localStorage
+    localStorage.setItem('cartItem', JSON.stringify(cartItem));
+
+    // Alert the user
+    alert(productName + " added to cart!");
+
+}
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxd81n3LT04VTGtmEeEEhJAvAw7E49gU5nO9yVErtJ0_CAdp-5MYhr1cz3dgIVtR54QJw/exec'
+        const form = document.forms['log']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>

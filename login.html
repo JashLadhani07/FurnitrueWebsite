@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form 5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #ececec;
+      }
+
+      .container {
+        width: 400px;
+        height: 480px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+        padding: 5px;
+        overflow: hidden;
+        border: 1px solid #f1f1f1;
+        box-shadow: 0 0 20px 0 #e4e4e4;
+      }
+
+      .tabs {
+        width: 220px;
+        margin: 35px auto;
+        position: relative;
+        box-shadow: 0 0 15px #cacaca;
+        border-radius: 30px;
+      }
+
+      .toggle-btn {
+        padding: 10px 30px;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        outline: none;
+        position: relative;
+      }
+
+      #btn {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 110px;
+        height: 100%;
+        background: rgb(55, 203, 55);
+        border-radius: 30px;
+        transition: 0.5s;
+      }
+
+      .social-icons {
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .social-icons i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #fff;
+        margin: 0 12px;
+        background: #333;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      .form {
+        top: 180px;
+        position: absolute;
+        width: 280px;
+        transition: 0.5s;
+      }
+
+      .input-filed {
+        width: 100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+      }
+
+      .submit-btn {
+width: 85%;
+height: 50px;
+padding: 10px 30px;
+cursor: pointer;
+display: block;
+margin: auto;
+background: rgb(55, 203, 55);
+border: 0;
+outline: none;
+border-radius: 15px;
+}
+
+      .check-box {
+        margin: 30px 10px 30px 0;
+      }
+
+      span {
+        color: #777;
+        font-size: 12px;
+        bottom: 68px;
+        position: absolute;
+      }
+
+      #login {
+        left: 50px;
+      }
+
+      #register {
+        left: 450px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">
+          Sign In
+        </button>
+        <button type="button" class="toggle-btn" onclick="registration()">
+          Register
+        </button>
+      </div>
+      <div class="social-icons">
+        <button><i class="fab fa-facebook-f"></i></button>
+        <button><i class="fab fa-twitter"></i></button>
+        <button><i class="fab fa-instagram"></i></button>
+      </div>
+
+      <form
+        id="login"
+        name="log"
+        class="form"
+        onsubmit="return validateLogin()"
+        action="index.html"
+        method="post"
+      >
+        <input
+          type="text"
+          class="input-filed"
+          placeholder="User Id required"
+          id="username"
+          name="user"
+        />
+        <input
+          type="password"
+          class="input-filed"
+          placeholder="Password"
+          id="password"
+          name="pass"
+        />
+        <input type="checkbox" class="check-box" /><span
+          >Remember Password</span
+        >
+        <button type="submit" class="submit-btn" style="font-size: large;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 400;">Sign In</button>
+      </form>
+
+
+
+      <form
+        name="reg"
+        id="register"
+        class="form"
+        onsubmit="return validateForm()"
+        action="index.html"
+        method="post"
+      >
+        <input
+          type="text"
+          class="input-filed"
+          placeholder="User Id"
+          id="uname"
+        />
+        <input type="email" class="input-filed" placeholder="Email Id" />
+        <input
+          type="password"
+          class="input-filed"
+          placeholder="Password"
+          id="pwd"
+        />
+      
+        <button type="submit" class="submit-btn" style="font-size: large;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 400;">Register</button>
+      </form>
+    </div>
+</form>
+    <script>
+      var logIn = document.getElementById("login");
+      var register = document.getElementById("register");
+      var button = document.getElementById("btn");
+
+      function registration() {
+        logIn.style.left = "-400px";
+        register.style.left = "50px";
+        button.style.left = "110px";
+      }
+
+      function login() {
+        logIn.style.left = "50px";
+        register.style.left = "450px";
+        button.style.left = "0";
+      }
+
+      function validateForm() {
+        let user = document.forms["reg"]["uname"].value;
+        let pass = document.forms["reg"]["pwd"].value;
+
+        if (user == "") {
+          alert("fill out your username");
+          return false;
+        }
+        if (pass < 8) {
+          alert("password should be more than 8 characters");
+          return false;
+        }
+      }
+
+      function validateLogin() {
+        let pass = document.forms["log"]["password"].value;
+        let user = document.forms["log"]["username"].value;
+        if (user == "") {
+          alert("fill out your username");
+          return false;
+        }
+        if (pass < 8) {
+          alert("password should be more than 8 characters");
+          return false;
+        }
+      }
+    </script>
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxd81n3LT04VTGtmEeEEhJAvAw7E49gU5nO9yVErtJ0_CAdp-5MYhr1cz3dgIVtR54QJw/exec'
+    const form = document.forms['log']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you! your form is submitted successfully." ))
+        .then(() => {  window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    <center>
+      <p>
+        By clicking the Sign Up page, you agree to our <br />
+        <a href="Terms&Conditions.html">Terms and Conditions</a>
+      </p>
+    </center>
+  </body>
+</html>

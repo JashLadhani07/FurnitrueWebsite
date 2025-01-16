@@ -1,0 +1,159 @@
+/* Shared styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Heading,
+  .title,
+  .Subtotal {
+    font-weight: bold;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .link:hover {
+    color: #666;
+  }
+  
+  .btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .btn:hover {
+    background-color: #eee;
+  }
+  
+  .amount {
+    font-weight: bold;
+  }
+  
+  /* Shopping Cart Styles */
+  .CartContainer {
+    width: 700px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .Cart-Items {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .image-box img {
+    width: 100px;
+    object-fit: cover;
+  }
+  
+  .about,
+  .counter,
+  .prices {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .checkout {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .checkout button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkout button:hover {
+    background-color: #444;
+  }
+  
+  /* Checkout Page Styles */
+  .CheckoutContainer {
+    width: 600px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .Cart-Summary {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .Billing-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .Billing-Info label {
+    width: 80px;
+  }
+  
+  .Billing-Info input,
+  .Billing-Info textarea {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .Billing-Info button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .Billing-Info button:hover {
+    background-color: #444;
+  }
+  

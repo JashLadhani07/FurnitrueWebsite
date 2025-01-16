@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(cubg.jpg);background-size: cover;">
+    <header>
+        <a href="#" class="logo">MAKAAN <span>.com</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="filter.html">Shop</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="contact (1).html">Contact Us</a></li>
+            <li><a href="shopcart.html" class="icon-cart"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+              </svg></a></li>
+        </ul>
+    </header>
+    <h2><center>Contact Us</center></h2>
+    <div class="contact">
+    <form method="POST" action="" name="contactform" id="contactform">
+        <br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" class="submit-btn"  value="Submit" style="font-size: large;font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 400;color: #fff;">
+    </form>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw02hILBTNbRuSJxAqQwjmrFqcO6i_CnYdSSkfMd_6xN4sVo0HpsbEjqkbENW1Od5ZJ8Q/exec'
+        const form = document.forms['contactform']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

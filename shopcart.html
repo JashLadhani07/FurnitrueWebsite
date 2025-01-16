@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart UI</title>
+    <link rel="stylesheet" type="text/css" href="cart.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+	<script src="shopping.js"></script>
+</head>
+<body>
+   <div class="CartContainer">
+       <div class="Header">
+           <a href="index.html" class="link">Go back to home page</a>
+           <h3 class="Heading">Shopping Cart</h3>
+           <h5 class="Action" onclick="removeAll()">Remove all</h5>
+       </div>
+
+       <div class="Cart-Items" id="product1">
+           <div class="image-box">
+               <img src="p1.jpg" style="height:120px" />
+           </div>
+           <div class="about">
+               <h1 class="title">Gray Chair</h1>
+               <div class="remove-item" onclick="removeItem('product1')">Remove</div>
+           </div>
+           <div class="counter">
+               <div class="btn" onclick="changeQuantity('product1', 'increase')">+</div>
+               <div class="count" id="count1">1</div>
+               <div class="btn" onclick="changeQuantity('product1', 'decrease')">-</div>
+           </div>
+           <div class="prices" id="price1">
+			<div class="amount"><span id="priceValue1">Rs.4600</span></div>
+           </div>
+       </div>
+
+       <div class="Cart-Items" id="product2">
+        <div class="image-box">
+            <img src="p2.jpg" style="height:120px" />
+        </div>
+        <div class="about">
+            <h1 class="title">Blue Chair</h1>
+            <div class="remove-item" onclick="removeItem('product2')">Remove</div>
+        </div>
+        <div class="counter">
+            <div class="btn" onclick="changeQuantity('product2', 'increase')">+</div>
+            <div class="count" id="count2">1</div>
+            <div class="btn" onclick="changeQuantity('product2', 'decrease')">-</div>
+        </div>
+        <div class="prices" id="price2">
+         <div class="amount"><span id="priceValue2">Rs.4900</span></div>
+        </div>
+        
+    </div>
+
+       <!-- Add more products similarly with unique IDs -->
+
+       <hr> 
+       <div class="checkout">
+           <div class="total">
+               <div>
+                <br>
+                   <div class="Subtotal">Sub-Total</div>
+               </div>
+               <div class="total-amount">Rs.9500</div>
+           </div>
+           <button class="button" onclick="myFunction()">Checkout</button>
+       </div>
+   </div>
+    
+
+   <script src="shopping.js">
+    </script>
+</body>
+</html>
